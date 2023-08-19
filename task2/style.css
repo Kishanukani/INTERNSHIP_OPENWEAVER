@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: black;
+}
+
+.container
+{
+    background-color: aqua;
+    display: flex;
+}
+
+.right{
+    width: 70%;
+    background-color: grey;
+}
+
+.left{
+    width: 30%;
+    background-color: beige;
+}
