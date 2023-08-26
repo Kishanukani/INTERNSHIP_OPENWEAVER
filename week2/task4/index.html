@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Login page</title>
+	<style>
+		img {
+			height: 60px;
+			border-radius: 51px;
+			width: 80%;
+		}
+	</style>
+</head>
+
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function () {
+		let form = document.getElementById("loginForm");
+		let loginimg = document.getElementById("loginimg");
+
+		loginimg.addEventListener("click", function () {
+			if (form.username.value === "root") {
+				if (form.password.value === "root") {
+					location.href = "page2.html";
+				} else {
+					alert("Invalid Password");
+				}
+			} else {
+				alert("Invalid Username");
+			}
+		});
+	});
+</script>
+
+<body>
+	<div class="container">
+		<div class="screen">
+			<div class="screen__content">
+				<form class="login" id="loginForm">
+					<h1>Login Page</h1>
+					<div class="login__field">
+						<i class="login__icon fas fa-user"></i>
+
+						<input type="text" class="login__input" placeholder="User name" name="username" id="username" />
+					</div>
+					<div class="login__field">
+						<i class="login__icon fas fa-lock"></i>
+
+						<input id="password" type="password" name="password" class="login__input"
+							placeholder="Password" />
+					</div>
+					<br>
+
+					<img class="button__icon" src="/images.jpg" alt="Login" id="loginimg" />
+				</form>
+
+			</div>
+			<div class="screen__background">
+				<span class="screen__background__shape screen__background__shape4"></span>
+				<span class="screen__background__shape screen__background__shape3"></span>
+				<span class="screen__background__shape screen__background__shape2"></span>
+				<span class="screen__background__shape screen__background__shape1"></span>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
